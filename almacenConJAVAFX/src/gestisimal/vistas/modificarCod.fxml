@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="198.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestisimal.vistas.almacenController">
+   <children>
+      <Label layoutX="159.0" layoutY="32.0" text="Modificar un archivo">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="78.0" text="Indique el código del producto que va a modificar " />
+      <Button fx:id="boton" layoutX="215.0" layoutY="140.0" mnemonicParsing="false" onAction="#guardarCodigo" text="Aceptar" />
+      <TextField fx:id="cod" layoutX="316.0" layoutY="74.0" prefHeight="23.0" prefWidth="122.0" />
+   </children>
+</Pane>

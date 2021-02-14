@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestisimal.vistas.almacenController">
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu fx:id="MLista" mnemonicParsing="false" onHidden="#limparResultado" onShown="#menuTexto" text="Lista">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#VentanaListar" text="Formato Lista">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+							</accelerator>
+						</MenuItem>
+						<MenuItem mnemonicParsing="false" onAction="#listaIndividual" text="Formato Individual">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+							</accelerator>
+						</MenuItem>
+					</items>
+				</Menu>
+				<Menu fx:id="MOpciones" mnemonicParsing="false" onHidden="#limparResultado" onShown="#menuTexto" text="Opciones">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#VentanaAlta" text="Alta">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+							</accelerator>
+						</MenuItem>
+						<MenuItem mnemonicParsing="false" onAction="#VentanaBaja" text="Baja">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="B" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+							</accelerator>
+						</MenuItem>
+						<MenuItem mnemonicParsing="false" onAction="#ventanaModificarCod" text="Modificar">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="M" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+							</accelerator>
+						</MenuItem>
+						<MenuItem mnemonicParsing="false" onAction="#VentanaMasStock" text="Entrada Mercancia">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+							</accelerator>
+						</MenuItem>
+						<MenuItem mnemonicParsing="false" onAction="#VentanaMenosStock" text="Salida Mercancia">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+							</accelerator>
+						</MenuItem>
+					</items>
+               <graphic>
+                  <ImageView fitHeight="200.0" fitWidth="20.0" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/maria/eclipse-workspace/almacenConJAVAFX/src/imagenes/articulo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+				</Menu>
+				<Menu fx:id="MUtilidades" mnemonicParsing="false" onHidden="#limparResultado" onShown="#menuTexto" text="Utilidades">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#VentanaExporta" text="Exporta a fichero">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+							</accelerator>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/maria/eclipse-workspace/almacenConJAVAFX/src/imagenes/computer-icons-export-clip-art-export.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+						</MenuItem>
+						<MenuItem mnemonicParsing="false" onAction="#importa" text="Importa fichero">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+							</accelerator>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/maria/eclipse-workspace/almacenConJAVAFX/src/imagenes/2356601.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+						</MenuItem>
+						<MenuItem mnemonicParsing="false" onAction="#salir" text="Salir">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+							</accelerator>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/maria/eclipse-workspace/almacenConJAVAFX/src/imagenes/descarga.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+						</MenuItem>
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<center>
+		<ImageView fitHeight="306.0" fitWidth="464.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+			<image>
+				<Image url="file:/C:/Users/maria/eclipse-workspace/almacenConJAVAFX/src/imagenes/almacen-start-up.jpg" />
+			</image>
+		</ImageView>
+	</center>
+	<bottom>
+		<TextArea fx:id="resultado" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="400.0" translateY="-30.0" BorderPane.alignment="CENTER">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#website" text="Github" />
+                  <MenuItem mnemonicParsing="false" onAction="#resumen" text="Resumen" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextArea>
+	</bottom>
+
+</BorderPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestisimal.vistas.almacenController">
+   <right>
+      <ScrollBar fx:id="scrollbar" orientation="VERTICAL" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <Pane prefHeight="345.0" prefWidth="423.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="41.0" layoutY="110.0" text="Descripción" />
+            <Label layoutX="41.0" layoutY="220.0" text="Precio Compra" />
+            <Label layoutX="41.0" layoutY="260.0" text="Precio Venta" />
+            <Label layoutX="41.0" layoutY="300.0" text="Unidades" />
+            <Label layoutX="41.0" layoutY="60.0" text="Código" />
+            <TextField fx:id="cod" layoutX="185.0" layoutY="60.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="precioCompra" layoutX="185.0" layoutY="220.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="precioVenta" layoutX="185.0" layoutY="260.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="stock" layoutX="185.0" layoutY="300.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="130.0" layoutY="23.0" text="Listado Individual">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="descripcion" layoutX="185.0" layoutY="106.0" prefHeight="63.0" prefWidth="202.0" />
+         </children></Pane>
+   </center>
+   <bottom>
+      <Pane prefHeight="69.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="79.0" layoutY="22.0" mnemonicParsing="false" onAction="#ventanaModificar" text="Modificar" />
+            <Button fx:id="boton" layoutX="300.0" layoutY="22.0" mnemonicParsing="false" onAction="#VentanaListar" text="Cambiar vista" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
